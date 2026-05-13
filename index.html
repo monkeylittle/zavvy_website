@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zavvy — compare your shopping basket across supermarkets</title>
+  <meta name="description" content="Scan barcodes, build a basket, and see what it costs at Tesco, Sainsbury's, Asda, Morrisons and SuperValu — across the UK and Ireland." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="/">
+        <span class="logo">Z</span>
+        <span>Zavvy</span>
+      </a>
+      <nav class="nav__links">
+        <a href="#how">How it works</a>
+        <a href="#stores">Supermarkets</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <h1>Stop guessing where your basket is cheapest.</h1>
+        <p class="hero__sub">
+          Scan a barcode, build your basket, and Zavvy tells you what it would cost
+          at every major supermarket in the UK and Ireland — instantly.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#how">See how it works</a>
+          <span class="hero__note">Coming soon to iOS &amp; Android</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <div class="container">
+        <h2>Three taps from barcode to best price.</h2>
+        <ol class="steps">
+          <li>
+            <span class="step__num">1</span>
+            <h3>Scan</h3>
+            <p>Point your camera at any barcode. Zavvy reads the EAN and looks up the product.</p>
+          </li>
+          <li>
+            <span class="step__num">2</span>
+            <h3>Add to basket</h3>
+            <p>Build the basket you'd actually buy this week. Adjust quantities, remove items.</p>
+          </li>
+          <li>
+            <span class="step__num">3</span>
+            <h3>Compare</h3>
+            <p>See the running total at every supermarket — GBP and EUR side by side.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="stores" id="stores">
+      <div class="container">
+        <h2>Supermarkets we compare.</h2>
+        <ul class="stores__grid">
+          <li><span class="flag">GB</span> Tesco</li>
+          <li><span class="flag">GB</span> Sainsbury's</li>
+          <li><span class="flag">GB</span> Asda</li>
+          <li><span class="flag">GB</span> Morrisons</li>
+          <li><span class="flag">IE</span> SuperValu</li>
+        </ul>
+        <p class="stores__note">
+          Own-brand items only show prices where they're stocked — we never silently
+          drop a store, so the totals are always honest.
+        </p>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2>Common questions.</h2>
+        <dl class="faq__list">
+          <div>
+            <dt>Is Zavvy free?</dt>
+            <dd>The MVP is free. Long-term we may add a small subscription for power features.</dd>
+          </div>
+          <div>
+            <dt>How fresh are the prices?</dt>
+            <dd>We refresh every product in our catalogue at least once a week, and re-scrape on demand the first time anyone scans an item.</dd>
+          </div>
+          <div>
+            <dt>What about own-brand items?</dt>
+            <dd>Own-brand items often have store-specific barcodes and won't appear at other stores. Zavvy shows "not available here" rather than hiding the gap.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>&copy; <span id="year"></span> Zavvy</span>
+      <a href="mailto:hello@zavvy.app">hello@zavvy.app</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
