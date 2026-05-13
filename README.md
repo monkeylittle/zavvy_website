@@ -1,6 +1,6 @@
 # zavvy_website
 
-Marketing landing page for [Zavvy](https://zavvy.app) — the barcode-scanning
+Marketing landing page for [Zavvy](https://zavvyapp.com) — the barcode-scanning
 shopping basket app that compares totals across major supermarkets in the
 UK and Ireland.
 
