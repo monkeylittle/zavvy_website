@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zavvy — Privacy Policy</title>
+  <meta name="description" content="How Zavvy handles your data: on-device scanning, what's collected, and your choices." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="/">
+        <span class="logo">Z</span>
+        <span>Zavvy</span>
+      </a>
+      <nav class="nav__links">
+        <a href="/#how">How it works</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <h1>Privacy Policy</h1>
+        <p class="hero__sub">Last updated 19 May 2026. Zavvy is operated by MonkeyLittle. Questions: <a href="mailto:feedback@zavvyapp.com">feedback@zavvyapp.com</a>.</p>
+      </div>
+    </section>
+
+    <section class="how">
+      <div class="container">
+        <h2>The short version</h2>
+        <p>Scanning runs <strong>on your device</strong>. We collect the
+          minimum needed to compare basket prices and keep your account.
+          We don't sell your data and there are no advertising or
+          tracking SDKs in the app.</p>
+
+        <h2>What we collect</h2>
+        <ul>
+          <li><strong>Account</strong> — your email address, via our
+            sign-in provider (Amazon Cognito), including when you use
+            Google or Apple sign-in.</li>
+          <li><strong>Shopping data</strong> — the baskets you build,
+            barcodes you scan, line items parsed from receipts, the
+            prices shown, and your savings totals.</li>
+          <li><strong>Receipt images &amp; scan text</strong> — receipts
+            and barcodes are read <strong>on your device</strong>. The
+            image and recognised text leave your device <strong>only
+            when you tap "Report a problem"</strong> on a scan, which
+            sends that receipt image, the raw recognised text, the
+            parsed result, and basic device/OS info so we can fix
+            scanning accuracy.</li>
+          <li><strong>Approximate location</strong> — used on your
+            device to pick the right country/currency and nearby store.
+            It is not stored by us or sent to our servers.</li>
+        </ul>
+
+        <h2>Payment details on receipts</h2>
+        <p>Receipts can print a card scheme, masked card number, and
+          payment identifiers. Zavvy <strong>automatically removes these
+          before anything is stored or transmitted</strong> — card data
+          is never retained, even in a problem report.</p>
+
+        <h2>How we use it</h2>
+        <p>To provide the price comparison and savings features, operate
+          your account, and investigate scans you report so the app gets
+          more accurate. We don't use your data for advertising or
+          profiling.</p>
+
+        <h2>Sharing</h2>
+        <p>We don't sell your data. We use infrastructure providers
+          (Amazon Web Services, hosted in the EU/Ireland region) to run
+          the service on our behalf. We disclose data only if required
+          by law.</p>
+
+        <h2>Storage &amp; security</h2>
+        <p>Data is stored on AWS in the EU (Ireland), encrypted in
+          transit (HTTPS/TLS) and at rest. Problem reports are kept only
+          as long as needed to diagnose and improve scanning.</p>
+
+        <h2>Your choices</h2>
+        <p>You can request access to, correction of, or deletion of your
+          data — including your account — by emailing
+          <a href="mailto:feedback@zavvyapp.com">feedback@zavvyapp.com</a>.
+          You can revoke camera, photo, or location permissions in your
+          device settings at any time (scanning needs the camera to
+          work).</p>
+
+        <h2>Children</h2>
+        <p>Zavvy is not directed at children and is intended for users
+          aged 18 and over.</p>
+
+        <h2>Changes</h2>
+        <p>We'll update this page if our practices change and revise the
+          date above.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>&copy; <span id="year"></span> Zavvy</span>
+      <nav class="footer__links">
+        <a href="/">Home</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/support/">Support</a>
+        <a href="mailto:feedback@zavvyapp.com">feedback@zavvyapp.com</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zavvy — Support</title>
+  <meta name="description" content="Get help with Zavvy: contact, common issues, and how to report a bad scan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="/">
+        <span class="logo">Z</span>
+        <span>Zavvy</span>
+      </a>
+      <nav class="nav__links">
+        <a href="/#how">How it works</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <h1>Support</h1>
+        <p class="hero__sub">
+          We're a small team. Email
+          <a href="mailto:feedback@zavvyapp.com">feedback@zavvyapp.com</a>
+          and we'll get back to you, usually within a few days.
+        </p>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>Common questions.</h2>
+        <dl class="faq__list">
+          <div>
+            <dt>A receipt or barcode scanned incorrectly.</dt>
+            <dd>On the scan result screen, tap <strong>"Report a problem
+              with this scan"</strong>. That sends us the receipt image,
+              the recognised text, and the parsed result so we can fix
+              the parser — it's the fastest way to get a scan corrected.
+              You can also fix any line in the edit drawer before
+              recording prices.</dd>
+          </div>
+          <div>
+            <dt>A price looks wrong or a store is missing.</dt>
+            <dd>Own-brand items often have store-specific barcodes and
+              won't match across supermarkets — Zavvy shows "not
+              available here" rather than hiding the gap. If a mainstream
+              product looks mispriced, report the scan and we'll
+              re-check it.</dd>
+          </div>
+          <div>
+            <dt>Sign-in or account help.</dt>
+            <dd>Zavvy uses email sign-in (plus Google and Apple). For
+              password resets use the in-app "forgot password" flow. For
+              anything else, email us.</dd>
+          </div>
+          <div>
+            <dt>Delete my account or data.</dt>
+            <dd>Email <a href="mailto:feedback@zavvyapp.com">feedback@zavvyapp.com</a>
+              from your account address and we'll remove your account and
+              associated data. See the
+              <a href="/privacy/">Privacy Policy</a> for what we hold.</dd>
+          </div>
+          <div>
+            <dt>Permissions.</dt>
+            <dd>Scanning needs the camera; reading a saved receipt photo
+              needs photo access; location is used only to pick the
+              right currency/store and is not stored. You can change
+              these in your device settings.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>&copy; <span id="year"></span> Zavvy</span>
+      <nav class="footer__links">
+        <a href="/">Home</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/support/">Support</a>
+        <a href="mailto:feedback@zavvyapp.com">feedback@zavvyapp.com</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
