@@ -1,12 +1,22 @@
+/* Zavvy website — matches the app design system (lib/app/zappy_tokens
+   .dart) and the transactional emails: warm sand page, cream cards,
+   clay accent, sage secondary, ink text; Instrument Serif (italic)
+   display + DM Sans body; the clay wax-stamp "z" mark. */
 :root {
-  --bg: #fbfaf6;
-  --ink: #1a1d1b;
-  --ink-soft: #4a5350;
-  --accent: #1f7a4d;
-  --accent-soft: #e6f3eb;
-  --line: #e3e0d6;
-  --radius: 14px;
-  --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.04);
+  --bg:        #F4EDE0;   /* warm sand page */
+  --card:      #FBF8F1;   /* cream surface */
+  --ink:       #1A1410;
+  --ink2:      #3D3328;
+  --ink3:      #6B5E50;
+  --clay:      #C25A3A;
+  --clay-deep: #9E3F23;
+  --clay-soft: #E89977;
+  --sage:      #6F8A5C;
+  --sage-soft: #BFCCAA;
+  --line:      #E0D5BD;
+  --line-soft: #E8DFC9;
+  --radius:    16px;
+  --shadow:    0 1px 2px rgba(26,20,16,0.04), 0 12px 32px rgba(26,20,16,0.06);
 }
 
 * { box-sizing: border-box; }
@@ -16,10 +26,21 @@ html, body {
   padding: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-size: 17px;
   line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
 }
+
+h1, h2, h3, .serif {
+  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+a { color: var(--clay); }
+a:hover { color: var(--clay-deep); }
 
 .container {
   max-width: 1080px;
@@ -39,30 +60,35 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 68px;
 }
 .nav__brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
   color: var(--ink);
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 20px;
 }
+/* Clay wax-stamp tile with a cream italic-serif "z" (the app icon). */
 .logo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 700;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: var(--clay);
+  color: var(--card);
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1;
 }
 .nav__links a {
-  color: var(--ink-soft);
+  color: var(--ink3);
   text-decoration: none;
   margin-left: 28px;
   font-weight: 500;
@@ -71,32 +97,32 @@ html, body {
 
 /* ── Hero ────────────────────────────────────────── */
 .hero {
-  padding: 96px 0 80px;
+  padding: 104px 0 88px;
   background:
-    radial-gradient(circle at 20% 0%, rgba(31,122,77,0.10), transparent 50%),
-    radial-gradient(circle at 90% 30%, rgba(31,122,77,0.06), transparent 50%);
+    radial-gradient(circle at 18% -10%, rgba(194,90,58,0.12), transparent 55%),
+    radial-gradient(circle at 92% 24%, rgba(111,138,92,0.10), transparent 55%);
 }
-.hero__inner { max-width: 760px; }
+.hero__inner { max-width: 780px; }
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  margin: 0 0 20px;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.08;
+  margin: 0 0 22px;
+  color: var(--ink);
 }
 .hero__sub {
-  font-size: 1.15rem;
-  color: var(--ink-soft);
-  margin: 0 0 32px;
-  max-width: 580px;
+  font-size: 1.18rem;
+  color: var(--ink2);
+  margin: 0 0 34px;
+  max-width: 600px;
 }
 .hero__cta {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 22px;
   flex-wrap: wrap;
 }
 .hero__note {
-  color: var(--ink-soft);
+  color: var(--ink3);
   font-size: 0.95rem;
 }
 
@@ -105,27 +131,27 @@ html, body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 22px;
+  padding: 15px 26px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
   border: 1px solid transparent;
-  transition: transform 0.06s ease, box-shadow 0.15s ease;
+  transition: transform 0.06s ease, background 0.15s ease;
 }
 .btn--primary {
-  background: var(--accent);
-  color: #fff;
+  background: var(--clay);
+  color: var(--card);
   box-shadow: var(--shadow);
 }
-.btn--primary:hover { transform: translateY(-1px); }
+.btn--primary:hover { background: var(--clay-deep); color: var(--card); transform: translateY(-1px); }
 .btn--primary:active { transform: translateY(0); }
 
 /* ── Sections ────────────────────────────────────── */
-section { padding: 80px 0; }
+section { padding: 84px 0; }
 section h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-  letter-spacing: -0.01em;
-  margin: 0 0 40px;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin: 0 0 44px;
+  color: var(--ink);
 }
 
 /* ── Steps ───────────────────────────────────────── */
@@ -138,25 +164,28 @@ section h2 {
   gap: 24px;
 }
 .steps li {
-  background: #fff;
+  background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 28px;
+  padding: 30px;
+  box-shadow: var(--shadow);
 }
 .step__num {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  background: var(--accent-soft);
-  color: var(--accent);
-  border-radius: 8px;
-  font-weight: 700;
-  margin-bottom: 14px;
+  width: 38px;
+  height: 38px;
+  background: var(--clay);
+  color: var(--card);
+  border-radius: 11px;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 16px;
 }
-.steps h3 { margin: 0 0 8px; font-size: 1.15rem; }
-.steps p { margin: 0; color: var(--ink-soft); }
+.steps h3 { margin: 0 0 8px; font-size: 1.35rem; color: var(--ink); }
+.steps p { margin: 0; color: var(--ink2); font-style: normal; }
 
 /* ── Stores ──────────────────────────────────────── */
 .stores__grid {
@@ -168,10 +197,10 @@ section h2 {
   gap: 16px;
 }
 .stores__grid li {
-  background: #fff;
+  background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 18px 20px;
+  padding: 20px 22px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -181,37 +210,49 @@ section h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent-soft);
-  color: var(--accent);
-  border-radius: 6px;
-  padding: 4px 8px;
-  font-size: 0.75rem;
+  background: var(--sage);
+  color: var(--card);
+  border-radius: 7px;
+  padding: 4px 9px;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 .stores__note {
-  color: var(--ink-soft);
-  max-width: 640px;
+  color: var(--ink3);
+  max-width: 660px;
 }
 
 /* ── FAQ ─────────────────────────────────────────── */
 .faq__list {
   margin: 0;
   display: grid;
-  gap: 20px;
+  gap: 22px;
 }
 .faq__list > div {
-  border-top: 1px solid var(--line);
-  padding-top: 20px;
+  border-top: 1px solid var(--line-soft);
+  padding-top: 22px;
 }
-.faq__list dt { font-weight: 600; margin-bottom: 6px; }
-.faq__list dd { margin: 0; color: var(--ink-soft); }
+.faq__list dt {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.faq__list dd { margin: 0; color: var(--ink2); }
+
+/* Prose (privacy / support pages reuse .how + headings). */
+.how p, .how li { color: var(--ink2); }
+.how h2 { margin-top: 8px; }
+.how ul { padding-left: 20px; }
+.how li { margin: 6px 0; }
 
 /* ── Footer ──────────────────────────────────────── */
 .footer {
   border-top: 1px solid var(--line);
-  padding: 32px 0;
-  color: var(--ink-soft);
+  padding: 36px 0;
+  color: var(--ink3);
   font-size: 0.95rem;
 }
 .footer__inner {
@@ -221,8 +262,8 @@ section h2 {
   flex-wrap: wrap;
   gap: 12px;
 }
-.footer a { color: var(--ink-soft); text-decoration: none; }
-.footer a:hover { color: var(--ink); }
+.footer a { color: var(--ink3); text-decoration: none; }
+.footer a:hover { color: var(--clay); }
 .footer__links {
   display: flex;
   flex-wrap: wrap;
