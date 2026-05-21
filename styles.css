@@ -266,18 +266,6 @@ section h2 {
   gap: 12px;
   font-weight: 600;
 }
-.flag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--sage);
-  color: var(--card);
-  border-radius: 7px;
-  padding: 4px 9px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-}
 .stores__note {
   color: var(--ink3);
   max-width: 660px;
