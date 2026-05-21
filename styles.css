@@ -145,6 +145,12 @@ a:hover { color: var(--clay-deep); }
 }
 .btn--primary:hover { background: var(--clay-deep); color: var(--card); transform: translateY(-1px); }
 .btn--primary:active { transform: translateY(0); }
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+.btn--ghost:hover { border-color: var(--clay); color: var(--clay-deep); transform: translateY(-1px); }
 
 /* ── Sections ────────────────────────────────────── */
 section { padding: 84px 0; }
@@ -186,6 +192,31 @@ section h2 {
 }
 .steps h3 { margin: 0 0 8px; font-size: 1.35rem; color: var(--ink); }
 .steps p { margin: 0; color: var(--ink2); font-style: normal; }
+
+/* ── Screenshots ─────────────────────────────────── */
+.shots__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+.shot { margin: 0; text-align: center; }
+.shot img {
+  width: 100%;
+  height: auto;
+  max-width: 280px;
+  /* Framed PNGs already carry the device bezel — just float them
+     with a soft drop shadow, no border/card. */
+  filter: drop-shadow(0 18px 36px rgba(26, 20, 16, 0.16));
+}
+.shot figcaption {
+  margin-top: 18px;
+  color: var(--ink3);
+  font-size: 0.98rem;
+}
+@media (max-width: 720px) {
+  .shots__grid { grid-template-columns: 1fr; gap: 44px; max-width: 320px; margin: 0 auto; }
+}
 
 /* ── Stores ──────────────────────────────────────── */
 .stores__grid {
@@ -241,6 +272,65 @@ section h2 {
   margin-bottom: 8px;
 }
 .faq__list dd { margin: 0; color: var(--ink2); }
+
+/* ── Beta signup ─────────────────────────────────── */
+.beta__card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 44px;
+  max-width: 620px;
+}
+.beta__card h2 { margin: 0 0 14px; }
+.beta__sub { color: var(--ink2); margin: 0 0 28px; }
+.beta__form { display: grid; gap: 22px; }
+.field { display: grid; gap: 8px; border: 0; padding: 0; margin: 0; }
+.field__label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink2);
+}
+.field input[type="email"] {
+  font: inherit;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--ink);
+}
+.field input[type="email"]:focus {
+  outline: none;
+  border-color: var(--clay);
+  box-shadow: 0 0 0 3px rgba(194, 90, 58, 0.15);
+}
+.choices { display: flex; gap: 12px; }
+.choice {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg);
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink2);
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+.choice:hover { border-color: var(--clay-soft); }
+/* Tint the whole pill when its radio is picked. */
+.choice:has(input:checked) {
+  border-color: var(--clay);
+  background: rgba(194, 90, 58, 0.08);
+  color: var(--ink);
+}
+.choice input { accent-color: var(--clay); }
+.beta__form .btn { justify-self: start; }
+.beta__hint { margin: 0; color: var(--ink3); font-size: 0.92rem; }
+.beta__direct { margin: 24px 0 0; color: var(--ink3); font-size: 0.95rem; }
 
 /* Prose (privacy / support pages reuse .how + headings). */
 .how p, .how li { color: var(--ink2); }

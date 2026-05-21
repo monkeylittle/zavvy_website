@@ -21,6 +21,7 @@
         <a href="#how">How it works</a>
         <a href="#stores">Coverage</a>
         <a href="#faq">FAQ</a>
+        <a href="#beta">Join the beta</a>
       </nav>
     </div>
   </header>
@@ -35,8 +36,9 @@
           and what you've saved.
         </p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="#how">See how it works</a>
-          <span class="hero__note">Coming soon to iOS &amp; Android</span>
+          <a class="btn btn--primary" href="#beta">Join the beta</a>
+          <a class="btn btn--ghost" href="#how">See how it works</a>
+          <span class="hero__note">Now in beta — iOS &amp; Android</span>
         </div>
       </div>
     </section>
@@ -61,6 +63,29 @@
             <p>See the running total at each UK &amp; Ireland supermarket — GBP and EUR side by side — and a tally of what you've saved.</p>
           </li>
         </ol>
+      </div>
+    </section>
+
+    <section class="shots" id="shots">
+      <div class="container">
+        <h2>See it in your hand.</h2>
+        <div class="shots__grid">
+          <figure class="shot">
+            <img src="assets/screenshots/scan.png" width="1242" height="2688"
+                 loading="lazy" alt="Zavvy scan screen on iPhone — scan a barcode or snap a receipt." />
+            <figcaption>Scan a barcode, or snap a receipt.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/screenshots/receipt.png" width="1242" height="2688"
+                 loading="lazy" alt="Zavvy receipt screen — parsed items and prices from a shopping receipt." />
+            <figcaption>Your receipt, read on-device into items.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/screenshots/product.png" width="1242" height="2688"
+                 loading="lazy" alt="Zavvy product screen — price compared across supermarkets." />
+            <figcaption>One product, every shop's price.</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -96,9 +121,49 @@
           </div>
           <div>
             <dt>What about own-brand items?</dt>
-            <dd>Own-brand items often have store-specific barcodes and won't appear at other stores. Zavvy shows "not available here" rather than hiding the gap.</dd>
+            <dd>Own-brand items usually have store-specific barcodes, so the same product won't always exist at another shop to compare against. You can still track its price history at the store that sells it — so you'll know when it goes up or drops, even when there's no like-for-like rival to line it up beside.</dd>
           </div>
         </dl>
+      </div>
+    </section>
+
+    <section class="beta" id="beta">
+      <div class="container">
+        <div class="beta__card">
+          <h2>Join the beta.</h2>
+          <p class="beta__sub">
+            Zavvy is in beta on iOS and Android. Tell us your email and which
+            phone you shop with, and we'll get you in.
+          </p>
+          <form class="beta__form" id="beta-form" novalidate>
+            <label class="field">
+              <span class="field__label">Email</span>
+              <input type="email" name="email" id="beta-email"
+                     placeholder="you@example.com" autocomplete="email" required />
+            </label>
+            <fieldset class="field field--devices">
+              <legend class="field__label">Primary device</legend>
+              <div class="choices">
+                <label class="choice">
+                  <input type="radio" name="device" value="iOS" required />
+                  <span>iOS</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="device" value="Android" />
+                  <span>Android</span>
+                </label>
+              </div>
+            </fieldset>
+            <button type="submit" class="btn btn--primary">Request access</button>
+            <p class="beta__hint" id="beta-hint" role="status" aria-live="polite">
+              On iOS we'll send you straight to TestFlight. On Android we add
+              your email to the tester list and email you the opt-in link.
+            </p>
+          </form>
+          <p class="beta__direct">
+            Already on iPhone? <a href="https://testflight.apple.com/join/WZ1DmF9k">Open the TestFlight beta&nbsp;&rarr;</a>
+          </p>
+        </div>
       </div>
     </section>
   </main>
@@ -116,6 +181,43 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Static site, no backend: iOS testers go straight to the public
+    // TestFlight link; Android testers can't self-join (Play needs
+    // their email added to the internal track), so we open a
+    // pre-filled mail to the beta inbox. Both paths require a chosen
+    // device + a valid email.
+    var TESTFLIGHT_URL = 'https://testflight.apple.com/join/WZ1DmF9k';
+    var BETA_EMAIL = 'feedback@zavvyapp.com';
+    var form = document.getElementById('beta-form');
+    var hint = document.getElementById('beta-hint');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = document.getElementById('beta-email').value.trim();
+        var device = (form.querySelector('input[name="device"]:checked') || {}).value;
+        if (!email || email.indexOf('@') < 1) {
+          hint.textContent = 'Please enter a valid email.';
+          return;
+        }
+        if (!device) {
+          hint.textContent = 'Pick the phone you shop with — iOS or Android.';
+          return;
+        }
+        if (device === 'iOS') {
+          hint.textContent = 'Opening TestFlight…';
+          window.location.href = TESTFLIGHT_URL;
+          return;
+        }
+        var subject = encodeURIComponent('Zavvy Android beta request');
+        var body = encodeURIComponent(
+          'Please add me to the Zavvy Android (Play) beta.\n\n' +
+          'Email: ' + email + '\nDevice: Android\n');
+        hint.textContent = 'Opening your email app to send the request…';
+        window.location.href =
+          'mailto:' + BETA_EMAIL + '?subject=' + subject + '&body=' + body;
+      });
+    }
   </script>
 </body>
 </html>
