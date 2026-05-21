@@ -310,6 +310,7 @@ section h2 {
   box-shadow: var(--shadow);
   padding: 44px;
   max-width: 620px;
+  margin: 0 auto;
 }
 .beta__card h2 { margin: 0 0 14px; }
 .beta__sub { color: var(--ink2); margin: 0 0 28px; }
