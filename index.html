@@ -156,8 +156,7 @@
             </fieldset>
             <button type="submit" class="btn btn--primary">Request access</button>
             <p class="beta__hint" id="beta-hint" role="status" aria-live="polite">
-              On iOS we'll send you straight to TestFlight. On Android we add
-              your email to the tester list and email you the opt-in link.
+              We'll open your email app to send the request to our beta team.
             </p>
           </form>
           <p class="beta__direct">
@@ -182,13 +181,10 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Static site, no backend: iOS testers go straight to the public
-    // TestFlight link; Android testers can't self-join (Play needs
-    // their email added to the internal track), so we open a
-    // pre-filled mail to the beta inbox. Both paths require a chosen
-    // device + a valid email.
-    var TESTFLIGHT_URL = 'https://testflight.apple.com/join/WZ1DmF9k';
-    var BETA_EMAIL = 'feedback@zavvyapp.com';
+    // Static site, no backend: the form opens a pre-filled mail to the
+    // beta team with the tester's email + device. Requires a chosen
+    // device and a valid email.
+    var BETA_EMAIL = 'beta-testing@zavvyapp.com';
     var form = document.getElementById('beta-form');
     var hint = document.getElementById('beta-hint');
     if (form) {
@@ -204,15 +200,10 @@
           hint.textContent = 'Pick the phone you shop with — iOS or Android.';
           return;
         }
-        if (device === 'iOS') {
-          hint.textContent = 'Opening TestFlight…';
-          window.location.href = TESTFLIGHT_URL;
-          return;
-        }
-        var subject = encodeURIComponent('Zavvy Android beta request');
+        var subject = encodeURIComponent('Zavvy beta request');
         var body = encodeURIComponent(
-          'Please add me to the Zavvy Android (Play) beta.\n\n' +
-          'Email: ' + email + '\nDevice: Android\n');
+          'Please add me to the Zavvy beta.\n\n' +
+          'Email: ' + email + '\nDevice: ' + device + '\n');
         hint.textContent = 'Opening your email app to send the request…';
         window.location.href =
           'mailto:' + BETA_EMAIL + '?subject=' + subject + '&body=' + body;
