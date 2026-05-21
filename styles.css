@@ -193,6 +193,35 @@ section h2 {
 .steps h3 { margin: 0 0 8px; font-size: 1.35rem; color: var(--ink); }
 .steps p { margin: 0; color: var(--ink2); font-style: normal; }
 
+/* ── Why Zavvy ───────────────────────────────────── */
+.why__lead {
+  font-size: 1.18rem;
+  color: var(--ink2);
+  max-width: 720px;
+  margin: -20px 0 40px;
+}
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+.why__card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+/* The payoff card (last) carries the clay accent so the eye lands
+   on the solution, not just the two problem cards. */
+.why__card:last-child {
+  background: rgba(194, 90, 58, 0.06);
+  border-color: var(--clay-soft);
+}
+.why__card h3 { margin: 0 0 10px; font-size: 1.35rem; color: var(--ink); }
+.why__card p { margin: 0; color: var(--ink2); font-style: normal; }
+.why__card em { color: var(--clay-deep); font-style: italic; }
+
 /* ── Screenshots ─────────────────────────────────── */
 .shots__grid {
   display: grid;
