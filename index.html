@@ -165,35 +165,17 @@
         <div class="beta__card">
           <h2>Join the beta.</h2>
           <p class="beta__sub">
-            Zavvy is in beta on iOS and Android. Tell us your email and which
-            phone you shop with, and we'll get you in.
+            Zavvy is in beta on iOS and Android — no sign-up needed. Tap your
+            platform to install it and start comparing your shop.
           </p>
-          <form class="beta__form" id="beta-form" novalidate>
-            <label class="field">
-              <span class="field__label">Email</span>
-              <input type="email" name="email" id="beta-email"
-                     placeholder="you@example.com" autocomplete="email" required />
-            </label>
-            <fieldset class="field field--devices">
-              <legend class="field__label">Primary device</legend>
-              <div class="choices">
-                <label class="choice">
-                  <input type="radio" name="device" value="iOS" required />
-                  <span>iOS</span>
-                </label>
-                <label class="choice">
-                  <input type="radio" name="device" value="Android" />
-                  <span>Android</span>
-                </label>
-              </div>
-            </fieldset>
-            <button type="submit" class="btn btn--primary">Request access</button>
-            <p class="beta__hint" id="beta-hint" role="status" aria-live="polite">
-              We'll open your email app to send the request to our beta team.
-            </p>
-          </form>
-          <p class="beta__direct">
-            On iPhone? <a href="https://testflight.apple.com/join/WZ1DmF9k">Open the TestFlight beta&nbsp;&rarr;</a>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="https://testflight.apple.com/join/WZ1DmF9k">iPhone&nbsp;— TestFlight</a>
+            <a class="btn btn--ghost" href="https://play.google.com/apps/testing/com.monkeylittle.zavvy">Android&nbsp;— Google Play</a>
+          </div>
+          <p class="beta__hint">
+            iPhone installs the free TestFlight app first; on Android, tap
+            &ldquo;Become a tester&rdquo; then Install. Questions?
+            <a href="mailto:feedback@zavvyapp.com">feedback@zavvyapp.com</a>
           </p>
         </div>
       </div>
@@ -213,35 +195,6 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Static site, no backend: the form opens a pre-filled mail to the
-    // beta team with the tester's email + device. Requires a chosen
-    // device and a valid email.
-    var BETA_EMAIL = 'beta-testing@zavvyapp.com';
-    var form = document.getElementById('beta-form');
-    var hint = document.getElementById('beta-hint');
-    if (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var email = document.getElementById('beta-email').value.trim();
-        var device = (form.querySelector('input[name="device"]:checked') || {}).value;
-        if (!email || email.indexOf('@') < 1) {
-          hint.textContent = 'Please enter a valid email.';
-          return;
-        }
-        if (!device) {
-          hint.textContent = 'Pick the phone you shop with — iOS or Android.';
-          return;
-        }
-        var subject = encodeURIComponent('Zavvy beta request');
-        var body = encodeURIComponent(
-          'Please add me to the Zavvy beta.\n\n' +
-          'Email: ' + email + '\nDevice: ' + device + '\n');
-        hint.textContent = 'Opening your email app to send the request…';
-        window.location.href =
-          'mailto:' + BETA_EMAIL + '?subject=' + subject + '&body=' + body;
-      });
-    }
   </script>
 </body>
 </html>
