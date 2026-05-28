@@ -271,6 +271,35 @@ section h2 {
   max-width: 660px;
 }
 
+/* ── Blog list ───────────────────────────────────── */
+.blog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 28px;
+  max-width: 760px;
+}
+.blog__list > li {
+  border-top: 1px solid var(--line-soft);
+  padding-top: 22px;
+}
+.blog__list h3 {
+  margin: 0 0 8px;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: 1.45rem;
+  color: var(--ink);
+}
+.blog__list h3 a { color: inherit; text-decoration: none; }
+.blog__list h3 a:hover { text-decoration: underline; }
+.blog__list p { margin: 0 0 6px; color: var(--ink2); }
+.blog__meta {
+  font-size: 0.85rem;
+  color: var(--ink3, var(--ink2));
+  letter-spacing: 0.02em;
+}
+
 /* ── FAQ ─────────────────────────────────────────── */
 .faq__list {
   margin: 0;
