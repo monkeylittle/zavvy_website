@@ -1,0 +1,40 @@
+# Site-wide config consumed by Jekyll on GitHub Pages. The site is
+# still 100% hand-written HTML (no Markdown); Jekyll is here purely for
+# the shared layout, includes, and the SEO/sitemap plugins.
+title: Zavvy
+tagline: Stop guessing where your basket is cheapest.
+description: >-
+  Scan barcodes and receipts, build a basket, and see what it costs across
+  the major supermarkets in Ireland. Save money-off coupons and scan them
+  at the till.
+url: https://zavvyapp.com
+lang: en_IE
+
+# Default social-card image used by jekyll-seo-tag when a page doesn't
+# set its own `image:` in frontmatter.
+image: /assets/screenshots/scan.png
+
+# Twitter handle: empty for now (no account); jekyll-seo-tag still emits
+# the summary_large_image card so shared links render correctly.
+twitter:
+  username: ""
+  card: summary_large_image
+
+# Used by jekyll-seo-tag's JSON-LD Organization block (sameAs links).
+social:
+  name: Zavvy
+  links:
+    - https://testflight.apple.com/join/WZ1DmF9k
+    - https://play.google.com/apps/testing/com.monkeylittle.zavvy
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Files the GitHub Pages build should not copy to _site.
+exclude:
+  - README.md
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - vendor

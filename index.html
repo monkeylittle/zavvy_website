@@ -1,265 +1,226 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zavvy — compare your shopping basket across supermarkets</title>
-  <meta name="description" content="Scan barcodes and receipts, build a basket, and see what it costs across the major supermarkets in Ireland. Save money-off coupons and scan them at the till." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="nav">
-    <div class="container nav__inner">
-      <a class="nav__brand" href="/">
-        <span class="logo">z</span>
-        <span>Zavvy</span>
-      </a>
-      <nav class="nav__links">
-        <a href="#why">Why Zavvy</a>
-        <a href="#how">How it works</a>
-        <a href="#coupons">Coupons</a>
-        <a href="#stores">Coverage</a>
-        <a href="#faq">FAQ</a>
-        <a href="#beta">Join the beta</a>
-      </nav>
+---
+layout: default
+title: Zavvy — compare your grocery basket across Irish supermarkets
+description: >-
+  Scan barcodes and receipts, build a basket, and see what it costs across
+  the major supermarkets in Ireland. Save money-off coupons and scan them
+  at the till.
+permalink: /
+---
+
+<section class="hero">
+  <div class="container hero__inner">
+    <h1>Stop guessing where your basket is cheapest.</h1>
+    <p class="hero__sub">
+      Scan a barcode or snap your receipt, build your basket, and Zavvy shows
+      what it would cost at the major supermarkets across Ireland —
+      and what you've saved.
+    </p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="#beta">Join the beta</a>
+      <a class="btn btn--ghost" href="#how">See how it works</a>
+      <span class="hero__note">Now in beta — iOS &amp; Android</span>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main>
-    <section class="hero">
-      <div class="container hero__inner">
-        <h1>Stop guessing where your basket is cheapest.</h1>
-        <p class="hero__sub">
-          Scan a barcode or snap your receipt, build your basket, and Zavvy shows
-          what it would cost at the major supermarkets across Ireland —
-          and what you've saved.
-        </p>
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#beta">Join the beta</a>
-          <a class="btn btn--ghost" href="#how">See how it works</a>
-          <span class="hero__note">Now in beta — iOS &amp; Android</span>
-        </div>
+<section class="why" id="why">
+  <div class="container">
+    <h2>Why Zavvy, why now?</h2>
+    <p class="why__lead">
+      Grocery bills have climbed hard these past few years, and a weekly
+      shop can cost noticeably more or less depending only on where you
+      buy it. Every euro stretches less than it used to — so
+      paying over the odds for the same items stings more than ever.
+    </p>
+    <div class="why__grid">
+      <div class="why__card">
+        <h3>Prices never sit still</h3>
+        <p>The same basket costs different amounts at different shops, and those prices move week to week. Whatever was cheapest last month might not be this month — and there's no way to eyeball that.</p>
       </div>
-    </section>
-
-    <section class="why" id="why">
-      <div class="container">
-        <h2>Why Zavvy, why now?</h2>
-        <p class="why__lead">
-          Grocery bills have climbed hard these past few years, and a weekly
-          shop can cost noticeably more or less depending only on where you
-          buy it. Every euro stretches less than it used to — so
-          paying over the odds for the same items stings more than ever.
-        </p>
-        <div class="why__grid">
-          <div class="why__card">
-            <h3>Prices never sit still</h3>
-            <p>The same basket costs different amounts at different shops, and those prices move week to week. Whatever was cheapest last month might not be this month — and there's no way to eyeball that.</p>
-          </div>
-          <div class="why__card">
-            <h3>Shopping around is a chore</h3>
-            <p>Comparing by hand means juggling apps, leaflets and memory, or driving shop to shop. Most of us don't have the time, so we stick to one store and quietly overpay — week after week.</p>
-          </div>
-          <div class="why__card">
-            <h3>Zavvy does the legwork</h3>
-            <p>Scan a barcode or snap a receipt and Zavvy compares <em>your</em> actual basket across the major Irish supermarkets in seconds — from prices real shoppers share. No trekking, no guesswork: just where your shop is genuinely cheapest.</p>
-          </div>
-        </div>
+      <div class="why__card">
+        <h3>Shopping around is a chore</h3>
+        <p>Comparing by hand means juggling apps, leaflets and memory, or driving shop to shop. Most of us don't have the time, so we stick to one store and quietly overpay — week after week.</p>
       </div>
-    </section>
-
-    <section class="how" id="how">
-      <div class="container">
-        <h2>From a barcode — or a receipt — to the cheapest basket.</h2>
-        <ol class="steps">
-          <li>
-            <span class="step__num">1</span>
-            <h3>Scan</h3>
-            <p>Scan a product barcode, or snap a shopping receipt. Zavvy reads it on your device and pulls out the items and prices.</p>
-          </li>
-          <li>
-            <span class="step__num">2</span>
-            <h3>Build your basket</h3>
-            <p>Keep the basket you'd actually buy. Adjust quantities, fix a line, or remove items.</p>
-          </li>
-          <li>
-            <span class="step__num">3</span>
-            <h3>Compare &amp; save</h3>
-            <p>See the running total at every Irish supermarket you could shop at — and a tally of what you've saved.</p>
-          </li>
-        </ol>
+      <div class="why__card">
+        <h3>Zavvy does the legwork</h3>
+        <p>Scan a barcode or snap a receipt and Zavvy compares <em>your</em> actual basket across the major Irish supermarkets in seconds — from prices real shoppers share. No trekking, no guesswork: just where your shop is genuinely cheapest.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="coupons" id="coupons">
-      <div class="container">
-        <h2>Never lose a money-off coupon again.</h2>
-        <p class="why__lead">
-          Those vouchers printed at the bottom of your receipt? Zavvy saves
-          them to your phone and shows the barcode right at the till — so the
-          coupon's in your pocket, not crumpled in a drawer past its date.
-        </p>
-        <div class="why__grid">
-          <div class="why__card">
-            <h3>Snap &amp; save</h3>
-            <p>Point Zavvy at a coupon — or it's picked up automatically when you snap a receipt. It reads the value, the spend it needs and the dates it's valid.</p>
-          </div>
-          <div class="why__card">
-            <h3>Scan at the till</h3>
-            <p>Open your wallet and Zavvy shows the coupon's barcode full-screen, ready for the checkout scanner — the printed voucher reproduced exactly.</p>
-          </div>
-          <div class="why__card">
-            <h3>Give one away, grab one you need</h3>
-            <p>Won't use a coupon before it expires? Pop it in the shared pool for someone else. Need one for your shop? Claim one a neighbour has given away — fair give-and-take, so it stays a community.</p>
-          </div>
-        </div>
+<section class="how" id="how">
+  <div class="container">
+    <h2>From a barcode — or a receipt — to the cheapest basket.</h2>
+    <ol class="steps">
+      <li>
+        <span class="step__num">1</span>
+        <h3>Scan</h3>
+        <p>Scan a product barcode, or snap a shopping receipt. Zavvy reads it on your device and pulls out the items and prices.</p>
+      </li>
+      <li>
+        <span class="step__num">2</span>
+        <h3>Build your basket</h3>
+        <p>Keep the basket you'd actually buy. Adjust quantities, fix a line, or remove items.</p>
+      </li>
+      <li>
+        <span class="step__num">3</span>
+        <h3>Compare &amp; save</h3>
+        <p>See the running total at every Irish supermarket you could shop at — and a tally of what you've saved.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="coupons" id="coupons">
+  <div class="container">
+    <h2>Never lose a money-off coupon again.</h2>
+    <p class="why__lead">
+      Those vouchers printed at the bottom of your receipt? Zavvy saves
+      them to your phone and shows the barcode right at the till — so the
+      coupon's in your pocket, not crumpled in a drawer past its date.
+    </p>
+    <div class="why__grid">
+      <div class="why__card">
+        <h3>Snap &amp; save</h3>
+        <p>Point Zavvy at a coupon — or it's picked up automatically when you snap a receipt. It reads the value, the spend it needs and the dates it's valid.</p>
       </div>
-    </section>
-
-    <section class="shots" id="shots">
-      <div class="container">
-        <h2>See it in your hand.</h2>
-        <div class="shots__grid">
-          <figure class="shot">
-            <img src="assets/screenshots/scan.png" width="1284" height="2778"
-                 loading="lazy" alt="Zavvy scan screen on iPhone — scan a barcode or snap a receipt." />
-            <figcaption>Scan a barcode, or snap a receipt.</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="assets/screenshots/receipt.png" width="1284" height="2778"
-                 loading="lazy" alt="Zavvy receipt screen — parsed items and prices from a shopping receipt." />
-            <figcaption>Your receipt, read on-device into items.</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="assets/screenshots/spend.png" width="1284" height="2778"
-                 loading="lazy" alt="Zavvy spend screen — your weekly grocery spend over time, by category." />
-            <figcaption>See where your grocery spend goes.</figcaption>
-          </figure>
-        </div>
+      <div class="why__card">
+        <h3>Scan at the till</h3>
+        <p>Open your wallet and Zavvy shows the coupon's barcode full-screen, ready for the checkout scanner — the printed voucher reproduced exactly.</p>
       </div>
-    </section>
-
-    <section class="stores" id="stores">
-      <div class="container">
-        <h2>Wherever you shop in Ireland.</h2>
-        <ul class="stores__grid">
-          <li>Tesco</li>
-          <li>Dunnes Stores</li>
-          <li>SuperValu</li>
-          <li>Aldi</li>
-          <li>Lidl</li>
-          <li>M&amp;S</li>
-          <li>SPAR</li>
-          <li>Centra</li>
-        </ul>
-        <p class="stores__note">
-          Own-brand items only show prices where they're stocked — we never silently
-          drop a store, so the totals are always honest.
-        </p>
+      <div class="why__card">
+        <h3>Give one away, grab one you need</h3>
+        <p>Won't use a coupon before it expires? Pop it in the shared pool for someone else. Need one for your shop? Claim one a neighbour has given away — fair give-and-take, so it stays a community.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="faq" id="faq">
-      <div class="container">
-        <h2>Common questions.</h2>
-        <dl class="faq__list">
-          <div>
-            <dt>Is Zavvy free?</dt>
-            <dd>Yes — Zavvy is free to use.</dd>
-          </div>
-          <div>
-            <dt>Where do the prices come from?</dt>
-            <dd>From real shopping. Zavvy builds its price picture from the receipts and scans people share across Irish supermarkets — so the more the community scans, the sharper your comparison.</dd>
-          </div>
-          <div>
-            <dt>What happens to my receipts?</dt>
-            <dd>Receipts are read on your device. The image stays on your phone — nothing is sent to us unless you choose to report a scanning problem — and any card details printed on a receipt are stripped automatically.</dd>
-          </div>
-          <div>
-            <dt>What about own-brand items?</dt>
-            <dd>Own-brand items usually have store-specific barcodes, so the same product won't always exist at another shop to compare against. You can still track its price history at the store that sells it — so you'll know when it goes up or drops, even when there's no like-for-like rival to line it up beside.</dd>
-          </div>
-        </dl>
+<section class="shots" id="shots">
+  <div class="container">
+    <h2>See it in your hand.</h2>
+    <div class="shots__grid">
+      <figure class="shot">
+        <img src="assets/screenshots/scan.png" width="1284" height="2778"
+             loading="lazy" alt="Zavvy scan screen on iPhone — scan a barcode or snap a receipt." />
+        <figcaption>Scan a barcode, or snap a receipt.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/screenshots/receipt.png" width="1284" height="2778"
+             loading="lazy" alt="Zavvy receipt screen — parsed items and prices from a shopping receipt." />
+        <figcaption>Your receipt, read on-device into items.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/screenshots/spend.png" width="1284" height="2778"
+             loading="lazy" alt="Zavvy spend screen — your weekly grocery spend over time, by category." />
+        <figcaption>See where your grocery spend goes.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="stores" id="stores">
+  <div class="container">
+    <h2>Wherever you shop in Ireland.</h2>
+    <ul class="stores__grid">
+      <li>Tesco</li>
+      <li>Dunnes Stores</li>
+      <li>SuperValu</li>
+      <li>Aldi</li>
+      <li>Lidl</li>
+      <li>M&amp;S</li>
+      <li>SPAR</li>
+      <li>Centra</li>
+    </ul>
+    <p class="stores__note">
+      Own-brand items only show prices where they're stocked — we never silently
+      drop a store, so the totals are always honest.
+    </p>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container">
+    <h2>Common questions.</h2>
+    <dl class="faq__list">
+      <div>
+        <dt>Is Zavvy free?</dt>
+        <dd>Yes — Zavvy is free to use.</dd>
       </div>
-    </section>
-
-    <section class="membership" id="membership">
-      <div class="container">
-        <h2>Bronze &amp; Silver — free, earned by scanning.</h2>
-        <p>Every shopper starts as <strong>Bronze</strong>. Scan your shops
-          and tag the items as you go, and you'll climb to
-          <strong>Silver</strong> — both free. (Gold, a paid tier, is on the
-          way.)</p>
-
-        <h3>Bronze — where you start</h3>
-        <ul>
-          <li>Compare your basket across UK &amp; Irish supermarkets</li>
-          <li>Scan barcodes to check and record prices</li>
-          <li><strong>Save &amp; share money-off coupons</strong> to scan at the till</li>
-          <li>Track your trips, prices compared and receipts</li>
-          <li>Your last <strong>2 weeks</strong> of receipt history</li>
-        </ul>
-
-        <h3>Silver — for active members</h3>
-        <ul>
-          <li><strong>Price-drop alerts</strong> on items you've scanned —
-            <em>now live</em></li>
-          <li><strong>Your full receipt history</strong> (Bronze sees 2
-            weeks) — <em>now live</em></li>
-          <li><strong>Your spend tracked over time</strong> —
-            <em>now live</em></li>
-          <li>The cheapest shop for your basket <em>(coming soon)</em></li>
-          <li>Early access to new features <em>(coming soon)</em></li>
-        </ul>
-
-        <h3>Reaching &amp; keeping Silver</h3>
-        <p>Reach Silver by scanning <strong>4 receipts</strong> and tagging
-          <strong>10 barcodes</strong> from their line items
-          <strong>within two weeks</strong>. Silver reflects your last two
-          weeks of scanning, so <strong>keep scanning to keep it</strong> —
-          let it lapse and you'll slip back to Bronze until you're active
-          again.</p>
+      <div>
+        <dt>Where do the prices come from?</dt>
+        <dd>From real shopping. Zavvy builds its price picture from the receipts and scans people share across Irish supermarkets — so the more the community scans, the sharper your comparison.</dd>
       </div>
-    </section>
-
-    <section class="beta" id="beta">
-      <div class="container">
-        <div class="beta__card">
-          <h2>Join the beta.</h2>
-          <p class="beta__sub">
-            Zavvy is in beta on iOS and Android — no sign-up needed. Tap your
-            platform to install it and start comparing your shop.
-          </p>
-          <div class="hero__cta">
-            <a class="btn btn--primary" href="https://testflight.apple.com/join/WZ1DmF9k">iPhone&nbsp;— TestFlight</a>
-            <a class="btn btn--ghost" href="https://play.google.com/apps/testing/com.monkeylittle.zavvy">Android&nbsp;— Google Play</a>
-          </div>
-          <p class="beta__hint">
-            iPhone installs the free TestFlight app first; on Android, tap
-            &ldquo;Become a tester&rdquo; then Install. Questions?
-            <a href="mailto:feedback@zavvyapp.com">feedback@zavvyapp.com</a>
-          </p>
-        </div>
+      <div>
+        <dt>What happens to my receipts?</dt>
+        <dd>Receipts are read on your device. The image stays on your phone — nothing is sent to us unless you choose to report a scanning problem — and any card details printed on a receipt are stripped automatically.</dd>
       </div>
-    </section>
-  </main>
+      <div>
+        <dt>What about own-brand items?</dt>
+        <dd>Own-brand items usually have store-specific barcodes, so the same product won't always exist at another shop to compare against. You can still track its price history at the store that sells it — so you'll know when it goes up or drops, even when there's no like-for-like rival to line it up beside.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <span>&copy; <span id="year"></span> Zavvy</span>
-      <nav class="footer__links">
-        <a href="/privacy/">Privacy</a>
-        <a href="/support/">Support</a>
+<section class="membership" id="membership">
+  <div class="container">
+    <h2>Bronze &amp; Silver — free, earned by scanning.</h2>
+    <p>Every shopper starts as <strong>Bronze</strong>. Scan your shops
+      and tag the items as you go, and you'll climb to
+      <strong>Silver</strong> — both free. (Gold, a paid tier, is on the
+      way.)</p>
+
+    <h3>Bronze — where you start</h3>
+    <ul>
+      <li>Compare your basket across UK &amp; Irish supermarkets</li>
+      <li>Scan barcodes to check and record prices</li>
+      <li><strong>Save &amp; share money-off coupons</strong> to scan at the till</li>
+      <li>Track your trips, prices compared and receipts</li>
+      <li>Your last <strong>2 weeks</strong> of receipt history</li>
+    </ul>
+
+    <h3>Silver — for active members</h3>
+    <ul>
+      <li><strong>Price-drop alerts</strong> on items you've scanned —
+        <em>now live</em></li>
+      <li><strong>Your full receipt history</strong> (Bronze sees 2
+        weeks) — <em>now live</em></li>
+      <li><strong>Your spend tracked over time</strong> —
+        <em>now live</em></li>
+      <li>The cheapest shop for your basket <em>(coming soon)</em></li>
+      <li>Early access to new features <em>(coming soon)</em></li>
+    </ul>
+
+    <h3>Reaching &amp; keeping Silver</h3>
+    <p>Reach Silver by scanning <strong>4 receipts</strong> and tagging
+      <strong>10 barcodes</strong> from their line items
+      <strong>within two weeks</strong>. Silver reflects your last two
+      weeks of scanning, so <strong>keep scanning to keep it</strong> —
+      let it lapse and you'll slip back to Bronze until you're active
+      again.</p>
+  </div>
+</section>
+
+<section class="beta" id="beta">
+  <div class="container">
+    <div class="beta__card">
+      <h2>Join the beta.</h2>
+      <p class="beta__sub">
+        Zavvy is in beta on iOS and Android — no sign-up needed. Tap your
+        platform to install it and start comparing your shop.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="https://testflight.apple.com/join/WZ1DmF9k">iPhone&nbsp;— TestFlight</a>
+        <a class="btn btn--ghost" href="https://play.google.com/apps/testing/com.monkeylittle.zavvy">Android&nbsp;— Google Play</a>
+      </div>
+      <p class="beta__hint">
+        iPhone installs the free TestFlight app first; on Android, tap
+        &ldquo;Become a tester&rdquo; then Install. Questions?
         <a href="mailto:feedback@zavvyapp.com">feedback@zavvyapp.com</a>
-      </nav>
+      </p>
     </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+  </div>
+</section>
